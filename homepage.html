@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dronche.BG</title>
+    <link rel="stylesheet" href="homepage.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav>
+        <div class="logo">
+            <p>DRONCHE.BG</p>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Търси продукти..." class="search-input">
+            <button class="search-btn" aria-label="Търси"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <button class="mobile-menu-toggle" aria-label="Меню">☰</button>
+        
+        <ul class="menu">
+            <li><a href="homepage.html">НАЧАЛНА СТРАНИЦА</a></li>
+            <li class="dropdown">
+                <button class="dropdown-btn">КАТАЛОГ <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="Catalog.html">Дронове</a>
+                    <a href="rc-planes.html">RC Самолети</a>
+                    <a href="rc-boats.html">RC Лодки</a>
+                    <a href="rc-cars.html">RC Коли</a>
+                    <a href="batteries.html">Батерии</a>
+                    <a href="joysticks.html">Джойстици</a>
+                </div>
+            </li>
+            <li><a href="kont.html"><i class="fas fa-shopping-cart"></i> КОЛИЧКА</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> ВХОД</a></li>
+        </ul>
+    </nav>
+    
+    <main id="main-content">
+        <section class="featured-products">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel">
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1516268335757-f0ec2afb6172?w=400" alt="DJI Mini 3 Pro">
+                            <h2>1299 лв</h2>
+                            <p>DJI Mini 3 Pro</p>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1559163238-94ce64fbea90?w=400" alt="RC Racing Car">
+                            <h2>89 лв</h2>
+                            <p>High Speed RC Racing Car</p>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400" alt="RC Самолет">
+                            <h2>459 лв</h2>
+                            <p>Professional RC Airplane</p>
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn prev-btn">❮</button>
+                        <button class="carousel-btn next-btn">❯</button>
+                    </div>
+                </div>
+                
+                <div class="indicators">
+                    <div class="indicator active"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="best-sellers">
+            <h2 class="section-title">Бестселъри</h2>
+            <div class="bestsellers-container">
+                <div class="bestseller-card">
+                    <img src="https://images.unsplash.com/photo-1516268335757-f0ec2afb6172?w=400" alt="DJI Air 3" class="bestseller-image">
+                    <div class="bestseller-info">
+                        <h3>DJI Air 3</h3>
+                        <p class="price">1899 лв</p>
+                        <p class="description">Professional drone with 4K camera</p>
+                    </div>
+                    <button class="add-to-cart">Купи</button>
+                </div>
+                
+                <div class="bestseller-card">
+                    <img src="https://images.unsplash.com/photo-1559163238-94ce64fbea90?w=400" alt="RC Racing Pro" class="bestseller-image">
+                    <div class="bestseller-info">
+                        <h3>RC Racing Pro</h3>
+                        <p class="price">149 лв</p>
+                        <p class="description">High speed racing car with 50km/h</p>
+                    </div>
+                    <button class="add-to-cart">Купи</button>
+                </div>
+                
+                <div class="bestseller-card">
+                    <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400" alt="RC Jet Plane" class="bestseller-image">
+                    <div class="bestseller-info">
+                        <h3>RC Jet Plane</h3>
+                        <p class="price">599 лв</p>
+                        <p class="description">Fast RC airplane for advanced pilots</p>
+                    </div>
+                    <button class="add-to-cart">Купи</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="product-categories">
+            <h2 class="section-title">Категории</h2>
+            <div class="categories-container">
+                <div class="category-card">
+                    <a href="drones.html" class="category-link">
+                        <img src="https://images.unsplash.com/photo-1516268335757-f0ec2afb6172?w=400" alt="ДРОНОВЕ" class="category-image">
+                        <div class="category-name">ДРОНОВЕ</div>
+                    </a>
+                </div>
+                
+                <div class="category-card">
+                    <a href="rc-planes.html" class="category-link">
+                        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400" alt="RC САМОЛЕТИ" class="category-image">
+                        <div class="category-name">RC САМОЛЕТИ</div>
+                    </a>
+                </div>
+                
+                <div class="category-card">
+                    <a href="rc-boats.html" class="category-link">
+                        <img src="https://images.unsplash.com/photo-1559163238-94ce64fbea90?w=400" alt="RC ЛОДКИ" class="category-image">
+                        <div class="category-name">RC ЛОДКИ</div>
+                    </a>
+                </div>
+                
+                <div class="category-card">
+                    <a href="rc-cars.html" class="category-link">
+                        <img src="https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=400" alt="RC КОЛИ" class="category-image">
+                        <div class="category-name">RC КОЛИ</div>
+                    </a>
+                </div>
+
+                <div class="category-card">
+                    <a href="batteries.html" class="category-link">
+                        <img src="https://images.unsplash.com/photo-1579481516173-29c5c2e417c9?w=400" alt="БАТЕРИИ" class="category-image">
+                        <div class="category-name">БАТЕРИИ</div>
+                    </a>
+                </div>
+
+                <div class="category-card">
+                    <a href="joysticks.html" class="category-link">
+                        <img src="https://images.unsplash.com/photo-1598933247716-3eea7e4e13ba?w=400" alt="ДЖОЙСТИЦИ" class="category-image">
+                        <div class="category-name">ДЖОЙСТИЦИ</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="footer-cta">
+                <div class="single-cta">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="cta-text">
+                        <h4>Намери ни</h4>
+                        <span>България, София</span>
+                    </div>
+                </div>
+                <div class="single-cta">
+                    <i class="fas fa-phone"></i>
+                    <div class="cta-text">
+                        <h4>Обади ни се</h4>
+                        <span>+359 123 456 789</span>
+                    </div>
+                </div>
+                <div class="single-cta">
+                    <i class="far fa-envelope-open"></i>
+                    <div class="cta-text">
+                        <h4>Напиши ни</h4>
+                        <span>info@dronche.bg</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social-icon">
+                <span>Последвай ни</span>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram twitter-bg"></i></a>
+                <a href="https://www.youtube.com"><i class="fab fa-youtube google-bg"></i></a>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <p>&copy; Dronche.BG | Всички права запазени</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul.menu').classList.toggle('show');
+            this.classList.toggle('open');
+        });
+
+        const dropdownBtn = document.querySelector('.dropdown-btn'); 
+        if (dropdownBtn) {
+            dropdownBtn.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.nextElementSibling.classList.toggle('show');
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-chevron-up');
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768 && !e.target.matches('.dropdown-btn') && !e.target.closest('.dropdown-content')) {
+                document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+                    dropdown.classList.remove('show');
+                });
+            }
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
+
+        function updateCarousel() {
+            const carousel = document.querySelector('.carousel');
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        document.querySelector('.prev-btn').addEventListener('click', () => {
+            currentSlide = (currentSlide > 0) ? currentSlide - 1 : totalSlides - 1;
+            updateCarousel();
+        });
+
+        document.querySelector('.next-btn').addEventListener('click', () => {
+            currentSlide = (currentSlide < totalSlides - 1) ? currentSlide + 1 : 0;
+            updateCarousel();
+        });
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+            });
+        });
+    </script>
+</body>
+</html>

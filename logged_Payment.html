@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Плащане | Вашият магазин</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <p>DRONCHE.BG</p>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Търси продукти..." class="search-input">
+            <button class="search-btn" aria-label="Търси"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <button class="mobile-menu-toggle" aria-label="Меню">☰</button>
+        
+        <ul class="menu">
+            <li><a href="homepage.html">НАЧАЛНА СТРАНИЦА</a></li>
+            <li class="dropdown">
+                <button class="dropdown-btn1">КАТАЛОГ <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="Catalog.html">Дронове</a>
+                    <a href="rc-planes.html">RC Самолети</a>
+                    <a href="rc-boats.html">RC Лодки</a>
+                    <a href="rc-cars.html">RC Коли</a>
+                    <a href="batteries.html">Батерии</a>
+                    <a href="joysticks.html">Джойстици</a>
+                </div>
+            </li>
+            <li><a href="kont.html"><i class="fas fa-shopping-cart"></i> КОЛИЧКА</a></li>
+            <li><a href="profile.html" class="login-btn"><i class="fas fa-user-circle"></i> User</a></li>
+        </ul>
+    </nav>
+
+    <!-- Основно съдържание -->
+    <main id="main-content" class="payment-container">
+        <div class="container">
+            <h1 class="section-title">Плащане</h1>
+            
+            <div class="payment-content">
+                <div class="order-summary">
+                    <h2>Вашата поръчка</h2>
+                    <div class="order-items">
+                        <div class="order-item">
+                            <span class="item-name">Double M4 059М+ John Wick</span>
+                            <span class="item-price">639.00 лв.</span>
+                        </div>
+                        <div class="order-item">
+                            <span class="item-name">ASG CZ Scorpion EVO 3 ATEK</span>
+                            <span class="item-price">745.00 лв.</span>
+                        </div>
+                        <div class="order-item">
+                            <span class="item-name">Arcturus Grey CQB</span>
+                            <span class="item-price">390.00 лв.</span>
+                        </div>
+                    </div>
+                    <div class="order-total">
+                        <span>Общо:</span>
+                        <span class="total-price">1 774.00 лв.</span>
+                    </div>
+                </div>
+
+                <form class="payment-form">
+                    <h2>Метод на плащане</h2>
+                    
+                    <div class="payment-methods">
+                        <label class="payment-option">
+                            <input type="radio" name="payment-method" value="card" checked>
+                            <span class="payment-label">Плащане с карта</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment-method" value="cod">
+                            <span class="payment-label">Наложен платеж</span>
+                        </label>
+                    </div>
+
+                    <h2 style="margin-top: 2rem;">Начин на доставка</h2>
+                    
+                    <div class="delivery-methods">
+                        <div class="delivery-option">
+                            <label>
+                                <input type="radio" name="delivery-method" value="address" class="delivery-radio">
+                                <span class="delivery-label">До адрес</span>
+                            </label>
+                            <div class="address-fields" style="display: none;">
+                                <div class="address-field">
+                                    <label for="city-select">Град</label>
+                                    <select id="city-select" class="address-input">
+                                        <option value="">Избери град</option>
+                                        <option value="sofia">София</option>
+                                        <option value="plovdiv">Пловдив</option>
+                                        <option value="varna">Варна</option>
+                                        <option value="burgas">Бургас</option>
+                                        <option value="ruse">Русе</option>
+                                        <option value="stara-zagora">Стара Загора</option>
+                                    </select>
+                                </div>
+
+                                <div class="address-field">
+                                    <label for="street-select">Улица</label>
+                                    <select id="street-select" class="address-input">
+                                        <option value="">Избери улица</option>
+                                        <option value="maria-luiza">ул. Мария Луиза</option>
+                                        <option value="tsar-osvoboditel">ул. Цар Освободител</option>
+                                        <option value="vasil-levski">бул. Васил Левски</option>
+                                        <option value="alexander-batenberg">ул. Александър Батенберг</option>
+                                        <option value="knyaz-boris">ул. Княз Борис I</option>
+                                    </select>
+                                </div>
+
+                                <div class="address-field">
+                                    <label for="block-input">Блок</label>
+                                    <input type="text" id="block-input" class="address-input" placeholder="Номер на блок">
+                                </div>
+
+                                <div class="address-field">
+                                    <label for="entrance-input">Вход</label>
+                                    <input type="text" id="entrance-input" class="address-input" placeholder="Вход (А, Б, В и т.н.)">
+                                </div>
+
+                                <div class="address-field">
+                                    <label for="apartment-input">Апартамент</label>
+                                    <input type="text" id="apartment-input" class="address-input" placeholder="Номер на апартамент">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="delivery-option">
+                            <label>
+                                <input type="radio" name="delivery-method" value="speedy" class="delivery-radio">
+                                <span class="delivery-label">Speedy</span>
+                            </label>
+                            <div class="delivery-select-wrapper" style="display: none;">
+                                <input type="text" class="delivery-search" placeholder="Избери офис...">
+                                <div class="delivery-dropdown">
+                                    <div class="delivery-option-item" data-value="speedy-sofia-1">Speedy - София, ул. Мария Луиза 1</div>
+                                    <div class="delivery-option-item" data-value="speedy-sofia-2">Speedy - София, ул. Цар Освободител 55</div>
+                                    <div class="delivery-option-item" data-value="speedy-sofia-3">Speedy - София, бул. Васил Левски 233</div>
+                                    <div class="delivery-option-item" data-value="speedy-plovdiv">Speedy - Пловдив, бул. България 78</div>
+                                    <div class="delivery-option-item" data-value="speedy-burgas">Speedy - Бургас, ул. Александър Батенберг 12</div>
+                                </div>
+                                <input type="hidden" class="delivery-select-value" name="speedy-office">
+                            </div>
+                        </div>
+                        
+                        <div class="delivery-option">
+                            <label>
+                                <input type="radio" name="delivery-method" value="econt" class="delivery-radio">
+                                <span class="delivery-label">eKont</span>
+                            </label>
+                            <div class="delivery-select-wrapper" style="display: none;">
+                                <input type="text" class="delivery-search" placeholder="Избери офис...">
+                                <div class="delivery-dropdown">
+                                    <div class="delivery-option-item" data-value="econt-sofia-1">eKont - София, ул. Княз Борис I 78</div>
+                                    <div class="delivery-option-item" data-value="econt-sofia-2">eKont - София, ул. Доротея Караколева 8</div>
+                                    <div class="delivery-option-item" data-value="econt-sofia-3">eKont - София, бул. Миларска 33</div>
+                                    <div class="delivery-option-item" data-value="econt-varna">eKont - Варна, ул. Св. Св. Кирил и Методий 45</div>
+                                    <div class="delivery-option-item" data-value="econt-ruse">eKont - Русе, ул. Александър I 92</div>
+                                </div>
+                                <input type="hidden" class="delivery-select-value" name="econt-office">
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 style="margin-top: 2rem;">Данни за плащане</h2>
+                    
+                    <div id="card-payment-section">
+                        <div class="form-group">
+                            <label for="card-name">Име на картата</label>
+                            <input type="text" id="card-name" placeholder="Име и фамилия" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="card-number">Номер на карта</label>
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry-date">Валидна до</label>
+                                <input type="text" id="expiry-date" placeholder="ММ/ГГ" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Имейл за потвърждение</label>
+                        <input type="email" id="email" placeholder="вашият@имейл.com" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-pay">Плати сега</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+  <footer class="footer-section">
+        <div class="footer-content">
+            <div class="footer-cta">
+                <div class="single-cta">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="cta-text">
+                        <h4>Намери ни</h4>
+                        <span>България, София</span>
+                    </div>
+                </div>
+                <div class="single-cta">
+                    <i class="fas fa-phone"></i>
+                    <div class="cta-text">
+                        <h4>Обади ни се</h4>
+                        <span>+359 123 456 789</span>
+                    </div>
+                </div>
+                <div class="single-cta">
+                    <i class="far fa-envelope-open"></i>
+                    <div class="cta-text">
+                        <h4>Напиши ни</h4>
+                        <span>info@dronche.bg</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social-icon">
+                <span>Последвай ни</span>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram twitter-bg"></i></a>
+                <a href="https://www.youtube.com"><i class="fab fa-youtube google-bg"></i></a>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <p>&copy; Dronche.BG | Всички права запазени</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul.menu').classList.toggle('show');
+            this.classList.toggle('open');
+        });
+
+        const dropdownBtn = document.querySelector('.dropdown-btn'); 
+        if (dropdownBtn) {
+            dropdownBtn.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.nextElementSibling.classList.toggle('show');
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-chevron-up');
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768 && !e.target.matches('.dropdown-btn') && !e.target.closest('.dropdown-content')) {
+                document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+                    dropdown.classList.remove('show');
+                });
+            }
+        });
+
+        // Payment method toggle
+        document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const cardSection = document.getElementById('card-payment-section');
+                if (this.value === 'card') {
+                    cardSection.style.display = 'block';
+                    document.getElementById('card-name').required = true;
+                    document.getElementById('card-number').required = true;
+                    document.getElementById('expiry-date').required = true;
+                    document.getElementById('cvv').required = true;
+                } else {
+                    cardSection.style.display = 'none';
+                    document.getElementById('card-name').required = false;
+                    document.getElementById('card-number').required = false;
+                    document.getElementById('expiry-date').required = false;
+                    document.getElementById('cvv').required = false;
+                }
+            });
+        });
+
+        // Delivery method toggle
+        document.querySelectorAll('.delivery-radio').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const allWrappers = document.querySelectorAll('.delivery-select-wrapper');
+                const allAddressFields = document.querySelectorAll('.address-fields');
+                
+                allWrappers.forEach(wrapper => wrapper.style.display = 'none');
+                allAddressFields.forEach(fields => fields.style.display = 'none');
+                
+                const selectedWrapper = this.closest('.delivery-option').querySelector('.delivery-select-wrapper');
+                const selectedAddressFields = this.closest('.delivery-option').querySelector('.address-fields');
+                
+                if (selectedWrapper) {
+                    selectedWrapper.style.display = 'block';
+                }
+                if (selectedAddressFields) {
+                    selectedAddressFields.style.display = 'block';
+                }
+            });
+        });
+
+        // Custom dropdown functionality
+        document.querySelectorAll('.delivery-option-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const wrapper = this.closest('.delivery-select-wrapper');
+                const selectedValue = wrapper.querySelector('.delivery-select-value');
+                const searchInput = wrapper.querySelector('.delivery-search');
+                
+                selectedValue.value = this.textContent;
+                searchInput.value = this.textContent;
+                
+                // Close dropdown
+                wrapper.querySelector('.delivery-dropdown').style.display = 'none';
+            });
+        });
+
+        // Search functionality
+        document.querySelectorAll('.delivery-search').forEach(search => {
+            search.addEventListener('focus', function() {
+                this.nextElementSibling.style.display = 'block';
+            });
+
+            search.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const dropdown = this.nextElementSibling;
+                
+                dropdown.style.display = 'block';
+                
+                dropdown.querySelectorAll('.delivery-option-item').forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.delivery-select-wrapper')) {
+                document.querySelectorAll('.delivery-dropdown').forEach(dropdown => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

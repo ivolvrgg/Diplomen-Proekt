@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">
+            <p>DRONCHE.BG</p>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Търси продукти..." class="search-input">
+            <button class="search-btn" aria-label="Търси"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <button class="mobile-menu-toggle" aria-label="Меню">☰</button>
+        
+        <ul class="menu">
+            <li><a href="homepage.html">НАЧАЛНА СТРАНИЦА</a></li>
+            <li class="dropdown">
+                <button class="dropdown-btn1">КАТАЛОГ <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="Catalog.html">Дронове</a>
+                    <a href="rc-planes.html">RC Самолети</a>
+                    <a href="rc-boats.html">RC Лодки</a>
+                    <a href="rc-cars.html">RC Коли</a>
+                    <a href="batteries.html">Батерии</a>
+                    <a href="joysticks.html">Джойстици</a>
+                </div>
+            </li>
+            <li><a href="kont.html"><i class="fas fa-shopping-cart"></i> КОЛИЧКА</a></li>
+            <li><a href="profile.html" class="login-btn"><i class="fas fa-user-circle"></i> User</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content" class="profile-container">
+        <div class="container">
+            <h1 class="section-title">Моят Профил</h1>
+            
+            <div class="profile-content">
+                <!-- Sidebar Navigation -->
+                <aside class="profile-sidebar">
+                    <div class="profile-nav">
+                        <button class="nav-btn active" data-section="info">
+                            <i class="fas fa-user"></i> Лични данни
+                        </button>
+                        <button class="nav-btn" data-section="orders">
+                            <i class="fas fa-list"></i> Моите поръчки
+                        </button>
+                        <button class="nav-btn" data-section="addresses">
+                            <i class="fas fa-map-marker-alt"></i> Адреси
+                        </button>
+                        <button class="nav-btn" data-section="settings">
+                            <i class="fas fa-cog"></i> Настройки
+                        </button>
+                        <button class="nav-btn logout-btn">
+                            <i class="fas fa-sign-out-alt"></i> Излезте
+                        </button>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <section class="profile-main">
+                    
+                    <!-- Personal Info Section -->
+                    <div class="section active" id="info-section">
+                        <div class="section-header">
+                            <h2>Лични данни</h2>
+                            <button class="edit-btn" id="edit-info-btn">
+                                <i class="fas fa-edit"></i> Редактирай
+                            </button>
+                        </div>
+                        
+                        <div class="user-profile-card">
+                            <div class="profile-avatar">
+                                <img src="https://via.placeholder.com/150" alt="Profile Avatar">
+                                <button class="change-avatar-btn" title="Смени аватар">
+                                    <i class="fas fa-camera"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="user-info-display">
+                                <div class="info-row">
+                                    <span class="label">Име:</span>
+                                    <span class="value" id="display-name">Иван Петров</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Email:</span>
+                                    <span class="value" id="display-email">ivan.petrov@example.com</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Телефон:</span>
+                                    <span class="value" id="display-phone">+359 123 456 789</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Град:</span>
+                                    <span class="value" id="display-city">София</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Членство от:</span>
+                                    <span class="value">15 януари 2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="user-info-form hidden" id="info-form">
+                            <div class="form-group">
+                                <label for="name">Име</label>
+                                <input type="text" id="name" value="Иван Петров" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" value="ivan.petrov@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" value="+359 123 456 789" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Град</label>
+                                <input type="text" id="city" value="София" required>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn-save">Запази</button>
+                                <button type="button" class="btn-cancel">Откажи</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div class="section" id="orders-section">
+                        <div class="section-header">
+                            <h2>Моите поръчки</h2>
+                        </div>
+                        
+                        <div class="orders-list">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">
+                                        <strong>Поръчка #ORD-001234</strong>
+                                        <span class="order-date">15 януари 2024</span>
+                                    </div>
+                                    <span class="order-status delivered">Доставена</span>
+                                </div>
+                                <div class="order-items">
+                                    <p>Double M4 059М+ John Wick (1x) - 639 лв.</p>
+                                    <p>ASG CZ Scorpion EVO 3 ATEK (1x) - 745 лв.</p>
+                                </div>
+                                <div class="order-footer">
+                                    <span class="order-total">Обща сума: 2144,4 лв.</span>
+                                    <button class="btn-view-details">Преглед</button>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">
+                                        <strong>Поръчка #ORD-001233</strong>
+                                        <span class="order-date">10 януари 2024</span>
+                                    </div>
+                                    <span class="order-status processing">В обработване</span>
+                                </div>
+                                <div class="order-items">
+                                    <p>Arcturus Grey CQB (1x) - 390 лв.</p>
+                                </div>
+                                <div class="order-footer">
+                                    <span class="order-total">Обща сума: 406 лв.</span>
+                                    <button class="btn-view-details">Преглед</button>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">
+                                        <strong>Поръчка #ORD-001232</strong>
+                                        <span class="order-date">5 януари 2024</span>
+                                    </div>
+                                    <span class="order-status shipped">Изпратена</span>
+                                </div>
+                                <div class="order-items">
+                                    <p>Battery Pack 11.1V (2x) - 150 лв.</p>
+                                </div>
+                                <div class="order-footer">
+                                    <span class="order-total">Обща сума: 159 лв.</span>
+                                    <button class="btn-view-details">Преглед</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Addresses Section -->
+                    <div class="section" id="addresses-section">
+                        <div class="section-header">
+                            <h2>Моите адреси</h2>
+                            <button class="btn-add-address">
+                                <i class="fas fa-plus"></i> Добави адрес
+                            </button>
+                        </div>
+                        
+                        <div class="addresses-list">
+                            <div class="address-card default">
+                                <div class="address-header">
+                                    <h3>Основен адрес</h3>
+                                    <span class="default-badge">Основен</span>
+                                </div>
+                                <p>Бул. Васил Левски 150</p>
+                                <p>1142 София, България</p>
+                                <p>Тел: +359 123 456 789</p>
+                                <div class="address-actions">
+                                    <button class="btn-edit-address">Редактирай</button>
+                                    <button class="btn-delete-address">Изтрий</button>
+                                </div>
+                            </div>
+
+                            <div class="address-card">
+                                <div class="address-header">
+                                    <h3>Работен адрес</h3>
+                                </div>
+                                <p>Ул. Александър Батенберг 30</p>
+                                <p>1000 София, България</p>
+                                <p>Тел: +359 987 654 321</p>
+                                <div class="address-actions">
+                                    <button class="btn-edit-address">Редактирай</button>
+                                    <button class="btn-delete-address">Изтрий</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Section -->
+                    <div class="section" id="settings-section">
+                        <div class="section-header">
+                            <h2>Настройки</h2>
+                        </div>
+                        
+                        <div class="settings-group">
+                            <h3>Известия</h3>
+                            <div class="setting-item">
+                                <div class="setting-text">
+                                    <p class="setting-label">Имейл известия за поръчки</p>
+                                    <p class="setting-desc">Получавайте уведомления за статуса на поръчката</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-text">
+                                    <p class="setting-label">Маркетингови имейли</p>
+                                    <p class="setting-desc">Получавайте ексклузивни предложения и новини</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-group">
+                            <h3>Сигурност</h3>
+                            <button class="btn-change-password">
+                                <i class="fas fa-lock"></i> Промени паролата
+                            </button>
+                            
+                        </div>
+
+                        <div class="settings-group danger-zone">
+                            <h3>Опасна зона</h3>
+                            <button class="btn-delete-account">
+                                <i class="fas fa-trash"></i> Изтрий профил
+                            </button>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="footer-cta">
+                <div class="single-cta">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="cta-text">
+                        <h4>Намери ни</h4>
+                        <span>България, София</span>
+                    </div>
+                </div>
+                <div class="single-cta">
+                    <i class="fas fa-phone"></i>
+                    <div class="cta-text">
+                        <h4>Обади ни се</h4>
+                        <span>+359 123 456 789</span>
+                    </div>
+                </div>
+                <div class="single-cta">
+                    <i class="far fa-envelope-open"></i>
+                    <div class="cta-text">
+                        <h4>Напиши ни</h4>
+                        <span>info@dronche.bg</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social-icon">
+                <span>Последвай ни</span>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram twitter-bg"></i></a>
+                <a href="https://www.youtube.com"><i class="fab fa-youtube google-bg"></i></a>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <p>&copy; Dronche.BG | Всички права запазени</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('show');
+        });
+
+        // Dropdown functionality
+        document.querySelectorAll('.dropdown-btn1').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const dropdown = this.parentElement;
+                    const content = dropdown.querySelector('.dropdown-content');
+                    const icon = this.querySelector('i');
+                    
+                    content.classList.toggle('show');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                }
+            });
+        });
+
+        // Dropdown hover effects for desktop
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', function() {
+                if (window.innerWidth > 768) {
+                    this.querySelector('.dropdown-btn1 i').classList.add('fa-chevron-up');
+                    this.querySelector('.dropdown-btn1 i').classList.remove('fa-chevron-down');
+                }
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                if (window.innerWidth > 768) {
+                    this.querySelector('.dropdown-btn1 i').classList.remove('fa-chevron-up');
+                    this.querySelector('.dropdown-btn1 i').classList.add('fa-chevron-down');
+                }
+            });
+        });
+
+        // Profile section navigation
+        document.querySelectorAll('.profile-nav .nav-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.classList.contains('logout-btn')) {
+                    window.location.href = 'homepage.html';
+                    return;
+                }
+                
+                document.querySelectorAll('.profile-nav .nav-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const section = this.dataset.section;
+                document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+                document.getElementById(section + '-section').classList.add('active');
+            });
+        });
+
+        // Edit profile info
+        const editBtn = document.getElementById('edit-info-btn');
+        const infoDisplay = document.querySelector('.user-info-display');
+        const infoForm = document.getElementById('info-form');
+        const cancelBtn = document.querySelector('.btn-cancel');
+
+        editBtn.addEventListener('click', function() {
+            infoDisplay.classList.add('hidden');
+            infoForm.classList.remove('hidden');
+        });
+
+        cancelBtn.addEventListener('click', function() {
+            infoDisplay.classList.remove('hidden');
+            infoForm.classList.add('hidden');
+        });
+
+        document.querySelector('.btn-save').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('display-name').textContent = document.getElementById('name').value;
+            document.getElementById('display-email').textContent = document.getElementById('email').value;
+            document.getElementById('display-phone').textContent = document.getElementById('phone').value;
+            document.getElementById('display-city').textContent = document.getElementById('city').value;
+            
+            infoDisplay.classList.remove('hidden');
+            infoForm.classList.add('hidden');
+        });
+
+        // View order details
+        document.querySelectorAll('.btn-view-details').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Функция за преглед на подробности на поръчката скоро ще бъде внедрена');
+            });
+        });
+
+        // Add address button
+        document.querySelector('.btn-add-address').addEventListener('click', function() {
+            alert('Функция за добавяне на адрес скоро ще бъде внедрена');
+        });
+
+        // Edit address buttons
+        document.querySelectorAll('.btn-edit-address').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Функция за редактиране на адрес скоро ще бъде внедрена');
+            });
+        });
+
+        // Delete address buttons
+        document.querySelectorAll('.btn-delete-address').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (confirm('Сигурен ли сте, че искате да изтриете този адрес?')) {
+                    this.closest('.address-card').remove();
+                }
+            });
+        });
+
+        // Change password button
+        document.querySelector('.btn-change-password').addEventListener('click', function() {
+            alert('Функция за промяна на парола скоро ще бъде внедрена');
+        });
+
+        // Two-factor authentication button
+        document.querySelector('.btn-two-factor').addEventListener('click', function() {
+            alert('Функция за двухфакторна аутентификация скоро ще бъде внедрена');
+        });
+
+        // Delete account button
+        document.querySelector('.btn-delete-account').addEventListener('click', function() {
+            if (confirm('ВНИМАНИЕ: Това действие е необратимо. Сигурен ли сте, че искате да изтриете вашия профил?')) {
+                alert('Функция за изтриване на профил скоро ще бъде внедрена');
+            }
+        });
+    </script>
+</body>
+</html>
